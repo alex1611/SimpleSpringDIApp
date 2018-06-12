@@ -6,6 +6,7 @@ import spring.java.config.JavaConfig;
 import spring.java.domain.BlogPost;
 import spring.java.domain.DataSource;
 import spring.java.service.BlogPostService;
+import spring.java.service.ServiceManager;
 
 public class MainApp {
     private static final Logger LOGGER = LoggerFactory.getLogger(MainApp.class);
@@ -18,6 +19,8 @@ public class MainApp {
         blogPostService.savePost(blogPost);
         DataSource dataSource = ctx.getBean(DataSource.class);
         LOGGER.info(dataSource.toString());
+        ServiceManager serviceManager = ctx.getBean(ServiceManager.class);
+        serviceManager.sendBlogPost(blogPost);
         ((AnnotationConfigApplicationContext) ctx).close();
 
 
