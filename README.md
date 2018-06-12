@@ -1,3 +1,4 @@
-# SimpleWebApp
-Simple web application using spring-framework
-Udemy guide 
+# Simple Spring dependency injecton app
+Simple application using spring-framework application
+Based on Udemy guide
+
