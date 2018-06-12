@@ -17,7 +17,7 @@ public class MainApp {
         blogPost.setTitle("Java test spring");
         blogPostService.savePost(blogPost);
         DataSource dataSource = ctx.getBean(DataSource.class);
-        LOGGER.debug(dataSource.toString());
+        LOGGER.info(dataSource.toString());
         ((AnnotationConfigApplicationContext) ctx).close();
 
 
